@@ -7,7 +7,9 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-150px * 7));  /* Adjust based on icon width and spacing */
+    transform: translateX(
+      calc(-150px * 7)
+    ); /* Adjust based on icon width and spacing */
   }
 }
 

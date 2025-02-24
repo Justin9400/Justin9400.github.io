@@ -64,18 +64,33 @@ function App() {
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold">Justin Kachornvanich</div>
           <div className="flex space-x-4">
-            <a href="#hero" className="hover:text-blue-400">Home</a>
-            <a href="#about" className="hover:text-blue-400">About</a>
-            <a href="#tech-stack" className="hover:text-blue-400">Tech Stack</a>
-            <a href="#skills" className="hover:text-blue-400">Skills</a>
-            <a href="#designs" className="hover:text-blue-400">Designs</a>
-            <a href="#contact" className="hover:text-blue-400">Contact</a>
+            <a href="#hero" className="hover:text-blue-400">
+              Home
+            </a>
+            <a href="#about" className="hover:text-blue-400">
+              About
+            </a>
+            <a href="#tech-stack" className="hover:text-blue-400">
+              Tech Stack
+            </a>
+            <a href="#skills" className="hover:text-blue-400">
+              Skills
+            </a>
+            <a href="#designs" className="hover:text-blue-400">
+              Designs
+            </a>
+            <a href="#contact" className="hover:text-blue-400">
+              Contact
+            </a>
           </div>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="container mx-auto px-4 py-16 md:py-32 mt-16">
+      <section
+        id="hero"
+        className="container mx-auto px-4 py-16 md:py-32 mt-16"
+      >
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Justin Kachornvanich
@@ -89,13 +104,24 @@ function App() {
             className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-blue-500"
           />
           <div className="flex justify-center gap-4">
-            <a href="https://github.com/Justin9400" className="text-blue-400 hover:text-blue-300" target="_blank">
+            <a
+              href="https://github.com/Justin9400"
+              className="text-blue-400 hover:text-blue-300"
+              target="_blank"
+            >
               <Github className="w-8 h-8" />
             </a>
-            <a href="https://www.linkedin.com/in/justin-kachornvanich-30a/" className="text-blue-400 hover:text-blue-300" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/justin-kachornvanich-30a/"
+              className="text-blue-400 hover:text-blue-300"
+              target="_blank"
+            >
               <Linkedin className="w-8 h-8" />
             </a>
-            <a href="mailto:justkachorn@gmail.com" className="text-blue-400 hover:text-blue-300">
+            <a
+              href="mailto:justkachorn@gmail.com"
+              className="text-blue-400 hover:text-blue-300"
+            >
               <Mail className="w-8 h-8" />
             </a>
           </div>
@@ -107,10 +133,14 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
           <p className="text-xl text-gray-300 mb-4">
-            I am a passionate Full Stack Developer with experience in building web applications using modern technologies. I enjoy solving complex problems and creating user-friendly interfaces.
+            I am a passionate Full Stack Developer with experience in building
+            web applications using modern technologies. I enjoy solving complex
+            problems and creating user-friendly interfaces.
           </p>
           <p className="text-xl text-gray-300">
-            My journey in the tech world started with a curiosity for how things work, and it has grown into a fulfilling career. I am always eager to learn new skills and take on new challenges.
+            My journey in the tech world started with a curiosity for how things
+            work, and it has grown into a fulfilling career. I am always eager
+            to learn new skills and take on new challenges.
           </p>
         </div>
       </section>
@@ -118,7 +148,9 @@ function App() {
       {/* Technology Carousel */}
       <section id="tech-stack" className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-center mb-4">Technology Stack</h2>
+          <h2 className="text-xl font-bold text-center mb-4">
+            Technology Stack
+          </h2>
           <div className="overflow-hidden">
             <div className="flex space-x-8 py-2">
               <div className="flex space-x-8 animate-scroll">
@@ -142,8 +174,10 @@ function App() {
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">Technical Skills</h2>
-          
+          <h2 className="text-3xl font-bold text-center mb-16">
+            Technical Skills
+          </h2>
+
           <div className="grid md:grid-cols-2 gap-12">
             {/* Frontend Skills */}
             <div className="bg-gray-800 p-8 rounded-lg">
@@ -151,7 +185,7 @@ function App() {
                 Frontend Technologies
               </h3>
               <div className="space-y-6">
-                {frontendSkills.map((skill) => (
+                {frontendSkills.map(skill => (
                   <div key={skill.name} className="flex items-center gap-4">
                     {skill.icon}
                     <span className="text-lg">{skill.name}</span>
@@ -166,7 +200,7 @@ function App() {
                 Backend Technologies
               </h3>
               <div className="space-y-6">
-                {backendSkills.map((skill) => (
+                {backendSkills.map(skill => (
                   <div key={skill.name} className="flex items-center gap-4">
                     {skill.icon}
                     <span className="text-lg">{skill.name}</span>
@@ -181,7 +215,9 @@ function App() {
       {/* Design Section */}
       <section id="designs" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">UI/UX Designs</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">
+            UI/UX Designs
+          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Design Card 1 */}
             <div className="bg-gray-800 rounded-lg overflow-hidden group">
@@ -201,11 +237,16 @@ function App() {
                   <h3 className="text-xl font-semibold">Mobile App Design</h3>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Modern fitness tracking app with intuitive user interface and smooth interactions.
+                  Modern fitness tracking app with intuitive user interface and
+                  smooth interactions.
                 </p>
                 <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">Figma</span>
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">UI/UX</span>
+                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
+                    Figma
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
+                    UI/UX
+                  </span>
                 </div>
               </div>
             </div>
@@ -228,11 +269,16 @@ function App() {
                   <h3 className="text-xl font-semibold">Dashboard Design</h3>
                 </div>
                 <p className="text-gray-300 mb-4">
-                  Analytics dashboard with data visualization and customizable widgets.
+                  Analytics dashboard with data visualization and customizable
+                  widgets.
                 </p>
                 <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">Wireframes</span>
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">Prototyping</span>
+                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
+                    Wireframes
+                  </span>
+                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
+                    Prototyping
+                  </span>
                 </div>
               </div>
             </div>
@@ -240,9 +286,9 @@ function App() {
         </div>
       </section>
 
-      <Carousel/>
+      <Carousel />
 
-      <Timeline/>
+      <Timeline />
 
       {/* Footer */}
       <footer id="contact" className="container mx-auto px-4 py-8">
