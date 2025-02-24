@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 7));  /* Adjust based on icon width and spacing */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
