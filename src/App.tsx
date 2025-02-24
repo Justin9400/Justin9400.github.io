@@ -62,7 +62,7 @@ function App() {
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold">Portfolio</div>
+          <div className="text-2xl font-bold">Justin Kachornvanich</div>
           <div className="flex space-x-4">
             <a href="#hero" className="hover:text-blue-400">Home</a>
             <a href="#about" className="hover:text-blue-400">About</a>
@@ -78,10 +78,10 @@ function App() {
       <section id="hero" className="container mx-auto px-4 py-16 md:py-32 mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Full Stack Developer
+            Justin Kachornvanich
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Crafting exceptional digital experiences with modern technologies
+            Software Engineer at CloudFit Software
           </p>
           <img
             src="src\images\Headshot.jpg"
