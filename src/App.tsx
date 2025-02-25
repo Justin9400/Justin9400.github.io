@@ -1,31 +1,82 @@
-import {
-  Code2,
-  Database,
-  Globe,
-  Layout,
-  Server,
-  Terminal,
-  Github,
-  Linkedin,
-  Mail,
-  Figma,
-  Palette,
-  Layers,
-} from 'lucide-react';
+import { Github, Linkedin, Mail, Figma, Palette, Layers } from 'lucide-react';
 import { Carousel } from './components/carousel/Carousel';
 import { Timeline } from './components/timeline/Timeline';
 
 function App() {
   const frontendSkills = [
-    { name: 'React', icon: <Layout className="w-6 h-6" /> },
-    { name: 'TypeScript', icon: <Code2 className="w-6 h-6" /> },
-    { name: 'HTML/CSS', icon: <Globe className="w-6 h-6" /> },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React_Logo.jpg"
+          alt="React"
+          className="h-16"
+        />
+      ),
+      name: 'React',
+    },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript_Logo.jpg"
+          alt="TypeScript"
+          className="h-16"
+        />
+      ),
+      name: 'TypeScript',
+    },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML_Logo.jpg"
+          alt="HTML"
+          className="h-16"
+        />
+      ),
+      name: 'HTML',
+    },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS_Logo.jpg"
+          alt="CSS"
+          className="h-16"
+        />
+      ),
+      name: 'CSS',
+    },
   ];
 
   const backendSkills = [
-    { name: 'Node.js', icon: <Server className="w-6 h-6" /> },
-    { name: 'PostgreSQL', icon: <Database className="w-6 h-6" /> },
-    { name: 'Python', icon: <Terminal className="w-6 h-6" /> },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
+          alt="C#"
+          className="h-16"
+        />
+      ),
+      name: 'C#',
+    },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
+          alt="SQL"
+          className="h-16"
+        />
+      ),
+      name: 'SQL',
+    },
+    {
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
+          alt="Python"
+          className="h-16"
+        />
+      ),
+      name: 'Python',
+    },
   ];
 
   // Duplicate the icons to create a seamless infinite scroll
