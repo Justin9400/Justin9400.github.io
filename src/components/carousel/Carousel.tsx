@@ -85,7 +85,7 @@ export const Carousel = () => {
     if (index !== 1) {
       goToSlide((currentIndex + index - 1 + projects.length) % projects.length);
     } else if (project.url) {
-      window.location.href = project.url;
+      window.open(project.url, '_blank');
     }
   };
 
