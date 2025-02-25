@@ -1,33 +1,22 @@
-import React, { useState } from 'react';
-import {
-  ChevronLeft,
-  ChevronRight,
-  Code,
-  Palette,
-  Globe,
-  Camera,
-  Music,
-  Video,
-} from 'lucide-react';
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
-  icon: React.ReactNode;
+  // icon: React.ReactNode;
   url?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Web Development',
-    description: 'Full-stack web applications built with modern technologies',
-    image:
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072',
-    icon: <Code className="w-6 h-6" />,
-    url: '#web-development',
+    title: 'Trading Signal Indicator',
+    description: 'Trading signal indicator for stock market analysis',
+    image: 'src/images/Trading-Signal-Indicator.jpg',
+    url: 'https://github.com/Justin9400/Trading-Signal-Indicator',
   },
   {
     id: 2,
@@ -35,7 +24,6 @@ const projects: Project[] = [
     description: 'Beautiful and intuitive user interfaces that delight users',
     image:
       'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=2064',
-    icon: <Palette className="w-6 h-6" />,
     url: '#ui-ux-design',
   },
   {
@@ -44,7 +32,6 @@ const projects: Project[] = [
     description: 'Capturing moments and creating visual stories',
     image:
       'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=2070',
-    icon: <Camera className="w-6 h-6" />,
     url: '#photography',
   },
   {
@@ -53,7 +40,6 @@ const projects: Project[] = [
     description: 'Strategic online presence and brand growth',
     image:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015',
-    icon: <Globe className="w-6 h-6" />,
     url: '#digital-marketing',
   },
   {
@@ -62,7 +48,6 @@ const projects: Project[] = [
     description: 'Creating engaging soundtracks and audio experiences',
     image:
       'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=2070',
-    icon: <Music className="w-6 h-6" />,
     url: '#music-production',
   },
   {
@@ -71,7 +56,6 @@ const projects: Project[] = [
     description: 'Professional video editing and motion graphics',
     image:
       'https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=2070',
-    icon: <Video className="w-6 h-6" />,
     url: '#video-editing',
   },
 ];
@@ -152,9 +136,6 @@ export const Carousel = () => {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                     />
-                    <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm p-2 rounded-full">
-                      {project.icon}
-                    </div>
                     {index === 1 && (
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <span className="text-white text-lg font-semibold">
