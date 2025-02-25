@@ -8,6 +8,7 @@ interface Project {
   image: string;
   // icon: React.ReactNode;
   url?: string;
+  tech: { icon: React.ReactNode; name: string }[];
 }
 
 const projects: Project[] = [
@@ -18,6 +19,18 @@ const projects: Project[] = [
     image:
       'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Trading-Signal-Indicator.jpg',
     url: 'https://github.com/Justin9400/Trading-Signal-Indicator',
+    tech: [
+      {
+        icon: (
+          <img
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
+            alt="Python"
+            className="w-6 h-6"
+          />
+        ),
+        name: 'Python',
+      },
+    ],
   },
   {
     id: 2,
@@ -26,6 +39,7 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=2064',
     url: '#ui-ux-design',
+    tech: [],
   },
   {
     id: 3,
@@ -34,6 +48,7 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=2070',
     url: '#photography',
+    tech: [],
   },
   {
     id: 4,
@@ -42,6 +57,7 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015',
     url: '#digital-marketing',
+    tech: [],
   },
   {
     id: 5,
@@ -50,6 +66,7 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=2070',
     url: '#music-production',
+    tech: [],
   },
   {
     id: 6,
@@ -58,6 +75,7 @@ const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&q=80&w=2070',
     url: '#video-editing',
+    tech: [],
   },
 ];
 
@@ -115,10 +133,10 @@ export const Carousel = () => {
                 key={project.id}
                 onClick={() => handleCardClick(project, index)}
                 className={`transform transition-all duration-1500 ease-in-out cursor-pointer
-                  ${index === 0 ? '-translate-x-8 scale-95 opacity-60' : ''}
-                  ${index === 1 ? 'translate-x-0 scale-100 opacity-100 z-20' : ''}
-                  ${index === 2 ? 'translate-x-8 scale-95 opacity-60' : ''}
-                  hover:scale-[1.02]`}
+                ${index === 0 ? '-translate-x-8 scale-95 opacity-60' : ''}
+                ${index === 1 ? 'translate-x-0 scale-100 opacity-100 z-20' : ''}
+                ${index === 2 ? 'translate-x-8 scale-95 opacity-60' : ''}
+                hover:scale-[1.02]`}
                 style={{
                   transitionProperty: 'all',
                   willChange: 'transform, opacity',
@@ -150,6 +168,11 @@ export const Carousel = () => {
                       {project.title}
                     </h3>
                     <p className="text-gray-400">{project.description}</p>
+                    <div className="flex space-x-2 mt-4">
+                      {project.tech.map((tech, index) => (
+                        <div key={index}>{tech.icon}</div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
