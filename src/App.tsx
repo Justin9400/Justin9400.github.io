@@ -33,7 +33,7 @@ function App() {
     {
       icon: (
         <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/React_Logo.jpg"
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/React_Logo.jpg"
           alt="React"
           className="h-16"
         />
@@ -41,27 +41,63 @@ function App() {
       name: 'React',
     },
     {
-      icon: <img src="TypeScript_Logo.jpg" alt="TypeScript" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/TypeScript_Logo.jpg"
+          alt="TypeScript"
+          className="h-16"
+        />
+      ),
       name: 'TypeScript',
     },
     {
-      icon: <img src="./images/C-Sharp.jpg" alt="C#" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/C-Sharp.jpg"
+          alt="C#"
+          className="h-16"
+        />
+      ),
       name: 'C#',
     },
     {
-      icon: <img src="SQL_Logo.jpg" alt="SQL" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/SQL_Logo.jpg"
+          alt="SQL"
+          className="h-16"
+        />
+      ),
       name: 'SQL',
     },
     {
-      icon: <img src="Python_Logo.jpg" alt="Python" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/Python_Logo.jpg"
+          alt="Python"
+          className="h-16"
+        />
+      ),
       name: 'Python',
     },
     {
-      icon: <img src="HTML_Logo.jpg" alt="HTML" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/HTML_Logo.jpg"
+          alt="HTML"
+          className="h-16"
+        />
+      ),
       name: 'HTML',
     },
     {
-      icon: <img src="CSS_Logo.jpg" alt="CSS" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/CSS_Logo.jpg"
+          alt="CSS"
+          className="h-16"
+        />
+      ),
       name: 'CSS',
     },
     // {
@@ -131,7 +167,7 @@ function App() {
             Software Engineer at CloudFit Software
           </p>
           <img
-            src="./Headshot.jpg"
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/image/"
             alt="Profile"
             className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-blue-500"
           />
