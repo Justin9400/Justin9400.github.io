@@ -38,20 +38,96 @@ function App() {
 
   // Duplicate the icons to create a seamless infinite scroll
   const techIcons = [
-    { icon: <Layout className="w-6 h-6" />, name: 'React' },
-    { icon: <Code2 className="w-6 h-6" />, name: 'TypeScript' },
-    { icon: <Server className="w-6 h-6" />, name: 'Node.js' },
-    { icon: <Database className="w-6 h-6" />, name: 'PostgreSQL' },
-    { icon: <Globe className="w-6 h-6" />, name: 'Web Dev' },
-    { icon: <Terminal className="w-6 h-6" />, name: 'CLI' },
-    { icon: <Cpu className="w-6 h-6" />, name: 'API' },
-    { icon: <Cloud className="w-6 h-6" />, name: 'Cloud' },
-    { icon: <Box className="w-6 h-6" />, name: 'Docker' },
-    { icon: <Boxes className="w-6 h-6" />, name: 'Microservices' },
-    { icon: <Webhook className="w-6 h-6" />, name: 'GraphQL' },
-    { icon: <Wrench className="w-6 h-6" />, name: 'DevOps' },
-    { icon: <Zap className="w-6 h-6" />, name: 'Redis' },
-    { icon: <Puzzle className="w-6 h-6" />, name: 'REST' },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/React_Logo.jpg"
+          alt="React"
+          className="h-16"
+        />
+      ),
+      name: 'React',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/TypeScript_Logo.jpg"
+          alt="TypeScript"
+          className="h-16"
+        />
+      ),
+      name: 'TypeScript',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/C-Sharp.jpg"
+          alt="C#"
+          className="h-16"
+        />
+      ),
+      name: 'C#',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/SQL_Logo.jpg"
+          alt="SQL"
+          className="h-16"
+        />
+      ),
+      name: 'SQL',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/Python_Logo.jpg"
+          alt="Python"
+          className="h-16"
+        />
+      ),
+      name: 'Python',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/HTML_Logo.jpg"
+          alt="HTML"
+          className="h-16"
+        />
+      ),
+      name: 'HTML',
+    },
+    {
+      icon: (
+        <img
+          src="src/images/Tech-Icons/CSS_Logo.jpg"
+          alt="CSS"
+          className="h-16"
+        />
+      ),
+      name: 'CSS',
+    },
+    // {
+    //   icon: (
+    //     <img
+    //       src="src/images/Tech-Icons/React_Logo.jpg"
+    //       alt="API"
+    //       className="h-16"
+    //     />
+    //   ),
+    //   name: 'API',
+    // },
+    // {
+    //   icon: (
+    //     <img
+    //       src="src/images/Tech-Icons/React_Logo.jpg"
+    //       alt="REST"
+    //       className="h-16"
+    //     />
+    //   ),
+    //   name: 'REST',
+    // },
   ];
 
   // Duplicate the array to create seamless scrolling
@@ -173,11 +249,9 @@ function App() {
                 {scrollingTechIcons.map((tech, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 text-center hover:scale-110 transition-transform duration-300"
+                    className="flex-shrink-0 text-center transition-transform duration-300"
                   >
-                    <div className="bg-gray-700 p-3 rounded-lg">
-                      {tech.icon}
-                    </div>
+                    <div>{tech.icon}</div>
                     <p className="mt-2 text-sm text-blue-400">{tech.name}</p>
                   </div>
                 ))}
