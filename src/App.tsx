@@ -31,7 +31,13 @@ function App() {
   // Duplicate the icons to create a seamless infinite scroll
   const techIcons = [
     {
-      icon: <img src="React_Logo.jpg" alt="React" className="h-16" />,
+      icon: (
+        <img
+          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/React_Logo.jpg"
+          alt="React"
+          className="h-16"
+        />
+      ),
       name: 'React',
     },
     {
