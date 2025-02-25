@@ -1,39 +1,21 @@
 export const Timeline = () => {
   const timelineData = [
     {
-      year: 'November 2024 - Present',
+      year: 'June 2023 - Present',
       title: 'CloudFit Software, Lynchburg, VA',
       description:
-        'I currently work as a Software Engineer at Google headquarters in Mountain View, California.',
+        'I currently work as a Software Engineer at CloudFit Software in Lynchburg, Virginia.',
       img: 'src/images/CloudFit_Logo.jpg',
       link: 'https://cloudfitsoftware.com/',
       side: 'left',
     },
     {
-      year: 'August 2024 - Present',
-      title: 'MIT Media Lab, Cambridge, MA',
-      description:
-        'My research on the AlterEgo project, demoed at TED 2019, focuses on developing neural network models for a wearable system allowing silent conversation via brain signals.',
-      img: 'src/images/ProFront_Logo.jpg',
-      link: 'https://profrontweb.com/',
-      side: 'right',
-    },
-    {
-      year: 'June 2023 - November 2024',
-      title: 'CloudFit Software, Lynchburg, VA',
+      year: 'August 2019 - May 2023',
+      title: 'University of Lynchburg, Lynchburg, VA',
       description:
         'I currently work as a Software Engineer at Google headquarters in Mountain View, California.',
-      img: 'src/images/CloudFit_Logo.jpg',
-      link: 'https://cloudfitsoftware.com/',
-      side: 'left',
-    },
-    {
-      year: 'June 2022 - August 2022',
-      title: 'CloudFit Software, Lynchburg, VA',
-      description:
-        'I currently work as a Software Engineer at Google headquarters in Mountain View, California.',
-      img: 'src/images/CloudFit_Logo.jpg',
-      link: 'https://cloudfitsoftware.com/',
+      img: 'src/images/University-of-Lynchburg_Logo.jpg',
+      link: 'https://www.lynchburg.edu/',
       side: 'right',
     },
   ];
