@@ -41,7 +41,7 @@ function App() {
     {
       icon: (
         <img
-          src="src/images/Tech-Icons/React_Logo.jpg"
+          src="images/Tech-Icons/React_Logo.jpg"
           alt="React"
           className="h-16"
         />
@@ -51,7 +51,7 @@ function App() {
     {
       icon: (
         <img
-          src="src/images/Tech-Icons/TypeScript_Logo.jpg"
+          src="images/Tech-Icons/TypeScript_Logo.jpg"
           alt="TypeScript"
           className="h-16"
         />
