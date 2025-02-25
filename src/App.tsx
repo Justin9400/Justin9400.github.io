@@ -11,14 +11,6 @@ import {
   Figma,
   Palette,
   Layers,
-  Cpu,
-  Cloud,
-  Box,
-  Boxes,
-  Webhook,
-  Wrench,
-  Zap,
-  Puzzle,
 } from 'lucide-react';
 import { Carousel } from './components/carousel/Carousel';
 import { Timeline } from './components/timeline/Timeline';
@@ -41,7 +33,7 @@ function App() {
     {
       icon: (
         <img
-          src="images/Tech-Icons/React_Logo.jpg"
+          src="src/images/Tech-Icons/React_Logo.jpg"
           alt="React"
           className="h-16"
         />
@@ -51,7 +43,7 @@ function App() {
     {
       icon: (
         <img
-          src="images/Tech-Icons/TypeScript_Logo.jpg"
+          src="src/images/Tech-Icons/TypeScript_Logo.jpg"
           alt="TypeScript"
           className="h-16"
         />
