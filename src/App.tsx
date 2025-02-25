@@ -39,7 +39,7 @@ function App() {
       name: 'TypeScript',
     },
     {
-      icon: <img src="C-Sharp.jpg" alt="C#" className="h-16" />,
+      icon: <img src="./images/C-Sharp.jpg" alt="C#" className="h-16" />,
       name: 'C#',
     },
     {
@@ -125,7 +125,7 @@ function App() {
             Software Engineer at CloudFit Software
           </p>
           <img
-            src="Headshot.jpg"
+            src="./Headshot.jpg"
             alt="Profile"
             className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-blue-500"
           />
