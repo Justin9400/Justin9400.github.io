@@ -15,7 +15,8 @@ const projects: Project[] = [
     id: 1,
     title: 'Trading Signal Indicator',
     description: 'Trading signal indicator for stock market analysis',
-    image: 'src/images/Trading-Signal-Indicator.jpg',
+    image:
+      'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Trading-Signal-Indicator.jpg',
     url: 'https://github.com/Justin9400/Trading-Signal-Indicator',
   },
   {
