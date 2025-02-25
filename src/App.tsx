@@ -167,7 +167,7 @@ function App() {
             Software Engineer at CloudFit Software
           </p>
           <img
-            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/"
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg"
             alt="Profile"
             className="w-48 h-48 rounded-full mx-auto mb-8 object-cover border-4 border-blue-500"
           />
