@@ -180,7 +180,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold">Justin Kachornvanich</div>
@@ -207,7 +206,6 @@ function App() {
         </nav>
       </header>
 
-      {/* Hero Section */}
       <section
         id="hero"
         className="container mx-auto px-4 py-16 md:py-32 mt-16"
@@ -249,7 +247,6 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -282,7 +279,6 @@ function App() {
         </div>
       </section>
 
-      {/* Technology Carousel */}
       {/* <section id="tech-stack" className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-center mb-4">
@@ -306,7 +302,6 @@ function App() {
         </div>
       </section> */}
 
-      {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-16">
@@ -314,7 +309,6 @@ function App() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Frontend Skills */}
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
                 Frontend Technologies
@@ -329,7 +323,6 @@ function App() {
               </div>
             </div>
 
-            {/* Backend Skills */}
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
                 Backend Technologies
@@ -361,7 +354,6 @@ function App() {
 
       <Timeline />
 
-      {/* Footer */}
       <footer id="contact" className="container mx-auto px-4 py-8">
         <div className="text-center text-gray-400">
           <p>© 2024 Portfolio. All rights reserved.</p>
