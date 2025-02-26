@@ -14,7 +14,7 @@ export const uiProjects: Project[] = [
           <img
             src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
             alt="Mobile App Design"
-            className="w-6 h-6"
+            className="w-8 h-6"
           />
         ),
         name: 'Mobile App Design',
@@ -34,7 +34,7 @@ export const uiProjects: Project[] = [
           <img
             src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
             alt="Dashboard Design"
-            className="w-6 h-6"
+            className="w-8 h-6"
           />
         ),
         name: 'Dashboard Design',
@@ -54,7 +54,7 @@ export const uiProjects: Project[] = [
           <img
             src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
             alt="Dashboard Design"
-            className="w-6 h-6"
+            className="w-8 h-6"
           />
         ),
         name: 'Dashboard Design',
