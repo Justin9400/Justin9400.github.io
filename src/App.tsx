@@ -195,6 +195,9 @@ function App() {
             <a href="#skills" className="hover:text-blue-400">
               Skills
             </a>
+            <a href="#certifications" className="hover:text-blue-400">
+              Certifications
+            </a>
             <a href="#uiProjects" className="hover:text-blue-400">
               Designs
             </a>
