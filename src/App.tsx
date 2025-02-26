@@ -184,30 +184,30 @@ function App() {
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold">Justin Kachornvanich</div>
           <div className="flex space-x-4">
-            <a href="#hero" className="hover:text-blue-400">
+            <a href="#home" className="hover:text-blue-400">
               Home
             </a>
             <a href="#about" className="hover:text-blue-400">
               About
             </a>
-            <a href="#tech-stack" className="hover:text-blue-400">
-              Tech Stack
-            </a>
             <a href="#skills" className="hover:text-blue-400">
               Skills
             </a>
-            <a href="#designs" className="hover:text-blue-400">
+            <a href="#uiProjects" className="hover:text-blue-400">
               Designs
             </a>
-            <a href="#contact" className="hover:text-blue-400">
-              Contact
+            <a href="#codingProjects" className="hover:text-blue-400">
+              Projects
+            </a>
+            <a href="#timeline" className="hover:text-blue-400">
+              Timeline
             </a>
           </div>
         </nav>
       </header>
 
       <section
-        id="hero"
+        id="home"
         className="container mx-auto px-4 py-16 md:py-32 mt-16"
       >
         <div className="max-w-4xl mx-auto text-center">
@@ -341,18 +341,20 @@ function App() {
       </section>
 
       <Carousel
+        id={'uiProjects'}
         projects={uiProjects}
         headerText={'UI/UX Designs'}
         subHeaderText={''}
       />
 
       <Carousel
+        id={'codingProjects'}
         projects={codingProjects}
         headerText={'My Portfolio'}
         subHeaderText={''}
       />
 
-      <Timeline />
+      <Timeline id={'timeline'} />
 
       <footer id="contact" className="container mx-auto px-4 py-8">
         <div className="text-center text-gray-400">
