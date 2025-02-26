@@ -1,6 +1,8 @@
-import { Github, Linkedin, Mail, Figma, Palette, Layers } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { Carousel } from './components/carousel/Carousel';
 import { Timeline } from './components/timeline/Timeline';
+import { codingProjects } from './projects/CodingProjects';
+import { uiProjects } from './projects/UIProjects';
 
 function App() {
   const frontendSkills = [
@@ -80,101 +82,101 @@ function App() {
   ];
 
   // Duplicate the icons to create a seamless infinite scroll
-  const techIcons = [
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React_Logo.jpg"
-          alt="React"
-          className="h-16"
-        />
-      ),
-      name: 'React',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript_Logo.jpg"
-          alt="TypeScript"
-          className="h-16"
-        />
-      ),
-      name: 'TypeScript',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
-          alt="C#"
-          className="h-16"
-        />
-      ),
-      name: 'C#',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
-          alt="SQL"
-          className="h-16"
-        />
-      ),
-      name: 'SQL',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
-          alt="Python"
-          className="h-16"
-        />
-      ),
-      name: 'Python',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML_Logo.jpg"
-          alt="HTML"
-          className="h-16"
-        />
-      ),
-      name: 'HTML',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS_Logo.jpg"
-          alt="CSS"
-          className="h-16"
-        />
-      ),
-      name: 'CSS',
-    },
-    // {
-    //   icon: (
-    //     <img
-    //       src="React_Logo.jpg"
-    //       alt="API"
-    //       className="h-16"
-    //     />
-    //   ),
-    //   name: 'API',
-    // },
-    // {
-    //   icon: (
-    //     <img
-    //       src="React_Logo.jpg"
-    //       alt="REST"
-    //       className="h-16"
-    //     />
-    //   ),
-    //   name: 'REST',
-    // },
-  ];
+  // const techIcons = [
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React_Logo.jpg"
+  //         alt="React"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'React',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript_Logo.jpg"
+  //         alt="TypeScript"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'TypeScript',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
+  //         alt="C#"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'C#',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
+  //         alt="SQL"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'SQL',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
+  //         alt="Python"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'Python',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML_Logo.jpg"
+  //         alt="HTML"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'HTML',
+  //   },
+  //   {
+  //     icon: (
+  //       <img
+  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS_Logo.jpg"
+  //         alt="CSS"
+  //         className="h-16"
+  //       />
+  //     ),
+  //     name: 'CSS',
+  //   },
+  //   // {
+  //   //   icon: (
+  //   //     <img
+  //   //       src="React_Logo.jpg"
+  //   //       alt="API"
+  //   //       className="h-16"
+  //   //     />
+  //   //   ),
+  //   //   name: 'API',
+  //   // },
+  //   // {
+  //   //   icon: (
+  //   //     <img
+  //   //       src="React_Logo.jpg"
+  //   //       alt="REST"
+  //   //       className="h-16"
+  //   //     />
+  //   //   ),
+  //   //   name: 'REST',
+  //   // },
+  // ];
 
   // Duplicate the array to create seamless scrolling
-  const scrollingTechIcons = [...techIcons, ...techIcons];
+  // const scrollingTechIcons = [...techIcons, ...techIcons];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
@@ -281,7 +283,7 @@ function App() {
       </section>
 
       {/* Technology Carousel */}
-      <section id="tech-stack" className="container mx-auto px-4 py-8">
+      {/* <section id="tech-stack" className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-center mb-4">
             Technology Stack
@@ -302,7 +304,7 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Skills Section */}
       <section id="skills" className="container mx-auto px-4 py-16">
@@ -345,81 +347,17 @@ function App() {
         </div>
       </section>
 
-      {/* Design Section */}
-      <section id="designs" className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">
-            UI/UX Designs
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Design Card 1 */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden group">
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e"
-                  alt="Design 1"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-blue-500 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Figma className="w-12 h-12 text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <Palette className="w-5 h-5 text-blue-400" />
-                  <h3 className="text-xl font-semibold">Mobile App Design</h3>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Modern fitness tracking app with intuitive user interface and
-                  smooth interactions.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
-                    Figma
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
-                    UI/UX
-                  </span>
-                </div>
-              </div>
-            </div>
+      <Carousel
+        projects={uiProjects}
+        headerText={'UI/UX Designs'}
+        subHeaderText={''}
+      />
 
-            {/* Design Card 2 */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden group">
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e"
-                  alt="Design 2"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute inset-0 bg-blue-500 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Layers className="w-12 h-12 text-white" />
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <Palette className="w-5 h-5 text-blue-400" />
-                  <h3 className="text-xl font-semibold">Dashboard Design</h3>
-                </div>
-                <p className="text-gray-300 mb-4">
-                  Analytics dashboard with data visualization and customizable
-                  widgets.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
-                    Wireframes
-                  </span>
-                  <span className="px-3 py-1 bg-blue-500 rounded-full text-sm">
-                    Prototyping
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Carousel />
+      <Carousel
+        projects={codingProjects}
+        headerText={'My Portfolio'}
+        subHeaderText={''}
+      />
 
       <Timeline />
 
