@@ -284,29 +284,6 @@ function App() {
         </div>
       </section>
 
-      {/* <section id="tech-stack" className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-center mb-4">
-            Technology Stack
-          </h2>
-          <div className="overflow-hidden">
-            <div className="flex space-x-8 py-2">
-              <div className="flex space-x-8 animate-scroll">
-                {scrollingTechIcons.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 text-center transition-transform duration-300"
-                  >
-                    <div>{tech.icon}</div>
-                    <p className="mt-2 text-sm text-blue-400">{tech.name}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section id="skills" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-16">
@@ -316,7 +293,7 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-                Frontend Technologies
+                Frontend
               </h3>
               <div className="space-y-6">
                 {frontendSkills.map(skill => (
@@ -330,7 +307,21 @@ function App() {
 
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-                Backend Technologies
+                Backend
+              </h3>
+              <div className="space-y-6">
+                {backendSkills.map(skill => (
+                  <div key={skill.name} className="flex items-center gap-4">
+                    {skill.icon}
+                    <span className="text-lg">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400">
+                Tools
               </h3>
               <div className="space-y-6">
                 {backendSkills.map(skill => (
