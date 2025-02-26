@@ -3,6 +3,8 @@ import { Carousel } from './components/carousel/Carousel';
 import { Timeline } from './components/timeline/Timeline';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
+import { HorizontalIconDisplay } from './components/horizontal-icon-display/HorizontalIconDisplay';
+import { certifications } from './data/Certifications';
 
 function App() {
   const frontendSkills = [
@@ -81,30 +83,6 @@ function App() {
     },
   ];
 
-  const certifications = [
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Sec+.jpg"
-          alt="CompTia Security+"
-          className="h-20"
-        />
-      ),
-      link: 'https://www.credly.com/badges/0b197a0d-825d-41e8-b343-d1ac7c27ac1b/linked_in_profile',
-      name: 'CompTia Security+',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/AZ-900.jpg"
-          alt="AZ-900"
-          className="h-20"
-        />
-      ),
-      link: 'https://learn.microsoft.com/en-us/users/justinkachornvanich-6272/credentials/6340f16d132cfd69?ref=https%3A%2F%2Fwww.linkedin.com%2F',
-      name: 'Microsoft AZ-900',
-    },
-  ];
   // Duplicate the icons to create a seamless infinite scroll
   // const techIcons = [
   //   {
@@ -364,27 +342,11 @@ function App() {
         </div>
       </section>
 
-      <section id="tech-stack" className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">
-            Certifications
-          </h2>
-          <div className="flex justify-center space-x-8">
-            {certifications.map((cert, index) => (
-              <a
-                key={index}
-                href={cert.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 text-center transition-transform duration-300"
-              >
-                <div className="flex justify-center">{cert.icon}</div>
-                <p className="mt-2 text-sm text-blue-400">{cert.name}</p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HorizontalIconDisplay
+        id={'certifications'}
+        headerText={'Certifications'}
+        certifications={certifications}
+      />
 
       <Carousel
         id={'uiProjects'}
