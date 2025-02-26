@@ -5,181 +5,11 @@ import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
 import { HorizontalIconDisplay } from './components/horizontal-icon-display/HorizontalIconDisplay';
 import { certifications } from './data/Certifications';
+import { frontendSkills } from './data/FrontEndSkills';
+import { backendSkills } from './data/BlackEndSkills';
+import { toolsSkills } from './data/ToolsSkills';
 
 function App() {
-  const frontendSkills = [
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React_Logo.jpg"
-          alt="React"
-          className="h-16"
-        />
-      ),
-      name: 'React',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript_Logo.jpg"
-          alt="TypeScript"
-          className="h-16"
-        />
-      ),
-      name: 'TypeScript',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML_Logo.jpg"
-          alt="HTML"
-          className="h-16"
-        />
-      ),
-      name: 'HTML',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS_Logo.jpg"
-          alt="CSS"
-          className="h-16"
-        />
-      ),
-      name: 'CSS',
-    },
-  ];
-
-  const backendSkills = [
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
-          alt="C#"
-          className="h-16"
-        />
-      ),
-      name: 'C#',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
-          alt="SQL"
-          className="h-16"
-        />
-      ),
-      name: 'SQL',
-    },
-    {
-      icon: (
-        <img
-          src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
-          alt="Python"
-          className="h-16"
-        />
-      ),
-      name: 'Python',
-    },
-  ];
-
-  // Duplicate the icons to create a seamless infinite scroll
-  // const techIcons = [
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React_Logo.jpg"
-  //         alt="React"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'React',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript_Logo.jpg"
-  //         alt="TypeScript"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'TypeScript',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
-  //         alt="C#"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'C#',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
-  //         alt="SQL"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'SQL',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
-  //         alt="Python"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'Python',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML_Logo.jpg"
-  //         alt="HTML"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'HTML',
-  //   },
-  //   {
-  //     icon: (
-  //       <img
-  //         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS_Logo.jpg"
-  //         alt="CSS"
-  //         className="h-16"
-  //       />
-  //     ),
-  //     name: 'CSS',
-  //   },
-  //   // {
-  //   //   icon: (
-  //   //     <img
-  //   //       src="React_Logo.jpg"
-  //   //       alt="API"
-  //   //       className="h-16"
-  //   //     />
-  //   //   ),
-  //   //   name: 'API',
-  //   // },
-  //   // {
-  //   //   icon: (
-  //   //     <img
-  //   //       src="React_Logo.jpg"
-  //   //       alt="REST"
-  //   //       className="h-16"
-  //   //     />
-  //   //   ),
-  //   //   name: 'REST',
-  //   // },
-  // ];
-
-  // Duplicate the array to create seamless scrolling
-  // const scrollingTechIcons = [...techIcons, ...techIcons];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <header className="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
@@ -285,21 +115,22 @@ function App() {
       </section>
 
       <section id="skills" className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">
-            Technical Skills
-          </h2>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-16">Technical Skills</h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             <div className="bg-gray-800 p-8 rounded-lg">
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
                 Frontend
               </h3>
               <div className="space-y-6">
                 {frontendSkills.map(skill => (
-                  <div key={skill.name} className="flex items-center gap-4">
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center gap-4"
+                  >
                     {skill.icon}
-                    <span className="text-lg">{skill.name}</span>
+                    {/* <span className="text-lg">{skill.name}</span> */}
                   </div>
                 ))}
               </div>
@@ -311,9 +142,12 @@ function App() {
               </h3>
               <div className="space-y-6">
                 {backendSkills.map(skill => (
-                  <div key={skill.name} className="flex items-center gap-4">
+                  <div
+                    key={skill.name}
+                    className="flex flex-col items-center gap-4"
+                  >
                     {skill.icon}
-                    <span className="text-lg">{skill.name}</span>
+                    {/* <span className="text-lg">{skill.name}</span> */}
                   </div>
                 ))}
               </div>
@@ -324,10 +158,13 @@ function App() {
                 Tools
               </h3>
               <div className="space-y-6">
-                {backendSkills.map(skill => (
-                  <div key={skill.name} className="flex items-center gap-4">
-                    {skill.icon}
-                    <span className="text-lg">{skill.name}</span>
+                {toolsSkills.map(tool => (
+                  <div
+                    key={tool.name}
+                    className="flex flex-col items-center gap-4"
+                  >
+                    {tool.icon}
+                    {/* <span className="text-lg">{tool.name}</span> */}
                   </div>
                 ))}
               </div>
