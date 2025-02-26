@@ -35,9 +35,9 @@ export const Timeline = (props: Timelineprops) => {
           {timelineData.map((item, index) => (
             <div
               key={index}
-              className={`mb-16 flex ${item.side === 'left' ? 'justify-start' : 'justify-end'} items-center w-full relative px-8`}
+              className={`mb-16 flex flex-col md:flex-row ${item.side === 'left' ? 'md:justify-start' : 'md:justify-end'} items-center w-full relative px-8`}
             >
-              <div className="w-1/2 px-12">
+              <div className="w-full md:w-1/2 px-12">
                 {item.side === 'left' && (
                   <div className="text-right">
                     <h3 className="text-lg font-bold text-white-600">
@@ -60,7 +60,7 @@ export const Timeline = (props: Timelineprops) => {
                 <img src={item.img} alt={item.title} className="w-10 h-10" />
               </a>
 
-              <div className="w-1/2 px-12">
+              <div className="w-full md:w-1/2 px-12">
                 {item.side === 'right' && (
                   <div>
                     <h3 className="text-lg font-bold text-white-600">

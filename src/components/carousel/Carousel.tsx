@@ -76,7 +76,7 @@ export const Carousel = (props: CarouselProps) => {
                   }}
                 >
                   <div
-                    className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-[400px] backdrop-blur-sm group"
+                    className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-[300px] md:w-[400px] backdrop-blur-sm group"
                     style={{
                       transform:
                         index !== 1 ? 'rotateY(5deg)' : 'rotateY(0deg)',

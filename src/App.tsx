@@ -14,7 +14,13 @@ function App() {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <header className="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold">Justin Kachornvanich</div>
+          <div className="flex items-center justify-center w-16 h-16">
+            <img
+              src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Logo.jpg"
+              alt="Profile"
+              className="w-full h-full rounded-full object-cover border-4 border-blue-500"
+            />
+          </div>
           <div className="flex space-x-4">
             <a href="#home" className="hover:text-blue-400">
               Home
