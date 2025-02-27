@@ -107,15 +107,14 @@ function App() {
             combines technical proficiency with analytical thinking.
           </p>
           <p className="text-xl text-gray-300 mb-4">
-            I am a software engineer with at CloudFit Software in Lynchburg,
-            Virginia who is passionate about helping others through building
-            software solutions. I have experience in building aesthetic web
-            applications using modern technologies and enjoy solving complex
-            problems. Please feel free to reach out to me with any
-            opportunities, networking inquiries, or to learn more about my
-            experiences. I look forward to connecting and discovering how we can
-            create positive outcomes together in the exciting world of
-            technology and data.
+            I am a software engineer at CloudFit Software in Lynchburg, Virginia
+            who is passionate about helping others through building software
+            solutions. I have experience in building aesthetic web applications
+            using modern technologies and enjoy solving complex problems. Please
+            feel free to reach out to me with any opportunities, networking
+            inquiries, or to learn more about my experiences. I look forward to
+            connecting and discovering how we can create positive outcomes
+            together in the exciting world of technology and data.
           </p>
         </div>
       </section>
