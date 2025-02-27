@@ -2,31 +2,31 @@ export const toolsSkills = [
   {
     icon: (
       <img
-        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/C-Sharp.jpg"
-        alt="C#"
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Github.jpg"
+        alt="Github"
         className="h-16"
       />
     ),
-    name: 'C#',
+    name: 'Github',
   },
   {
     icon: (
       <img
-        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL.jpg"
-        alt="SQL"
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Azure.jpg"
+        alt="Azure"
         className="h-16"
       />
     ),
-    name: 'SQL',
+    name: 'Azure',
   },
   {
     icon: (
       <img
-        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python.jpg"
-        alt="Python"
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/ADO.jpg"
+        alt="ADO"
         className="h-16"
       />
     ),
-    name: 'Python',
+    name: 'Azure DevOps',
   },
 ];
