@@ -12,7 +12,7 @@ export const toolsSkills = [
   {
     icon: (
       <img
-        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL_Logo.jpg"
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/SQL.jpg"
         alt="SQL"
         className="h-16"
       />
@@ -22,7 +22,7 @@ export const toolsSkills = [
   {
     icon: (
       <img
-        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python_Logo.jpg"
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Python.jpg"
         alt="Python"
         className="h-16"
       />

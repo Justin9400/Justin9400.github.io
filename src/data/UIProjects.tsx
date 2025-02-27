@@ -12,7 +12,7 @@ export const uiProjects: Project[] = [
       {
         icon: (
           <img
-            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma.jpg"
             alt="Mobile App Design"
             className="w-8 h-6"
           />
@@ -32,7 +32,7 @@ export const uiProjects: Project[] = [
       {
         icon: (
           <img
-            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma.jpg"
             alt="Dashboard Design"
             className="w-8 h-6"
           />
@@ -52,7 +52,7 @@ export const uiProjects: Project[] = [
       {
         icon: (
           <img
-            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma_Logo.jpg"
+            src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Figma.jpg"
             alt="Dashboard Design"
             className="w-8 h-6"
           />

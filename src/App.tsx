@@ -133,10 +133,12 @@ function App() {
                 {frontendSkills.map(skill => (
                   <div
                     key={skill.name}
-                    className="flex flex-col items-center gap-4"
+                    className="flex flex-col items-center gap-4 relative group"
                   >
                     {skill.icon}
-                    {/* <span className="text-lg">{skill.name}</span> */}
+                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
+                      {skill.name}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -150,10 +152,12 @@ function App() {
                 {backendSkills.map(skill => (
                   <div
                     key={skill.name}
-                    className="flex flex-col items-center gap-4"
+                    className="flex flex-col items-center gap-4 relative group"
                   >
                     {skill.icon}
-                    {/* <span className="text-lg">{skill.name}</span> */}
+                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
+                      {skill.name}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -167,10 +171,12 @@ function App() {
                 {toolsSkills.map(tool => (
                   <div
                     key={tool.name}
-                    className="flex flex-col items-center gap-4"
+                    className="flex flex-col items-center gap-4 relative group"
                   >
                     {tool.icon}
-                    {/* <span className="text-lg">{tool.name}</span> */}
+                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
+                      {tool.name}
+                    </div>
                   </div>
                 ))}
               </div>

@@ -9,7 +9,7 @@ export const Timeline = (props: Timelineprops) => {
       title: 'CloudFit Software, Lynchburg, VA',
       description:
         'I currently work as a Software Engineer at CloudFit Software in Lynchburg, Virginia.',
-      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CloudFit_Logo.jpg',
+      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CloudFit.jpg',
       link: 'https://cloudfitsoftware.com/',
       side: 'left',
     },
@@ -18,7 +18,7 @@ export const Timeline = (props: Timelineprops) => {
       title: 'University of Lynchburg, Lynchburg, VA',
       description:
         'I currently work as a Software Engineer at Google headquarters in Mountain View, California.',
-      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/University-of-Lynchburg_Logo.jpg',
+      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/University-of-Lynchburg.jpg',
       link: 'https://www.lynchburg.edu/',
       side: 'right',
     },
