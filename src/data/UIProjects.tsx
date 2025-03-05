@@ -3,11 +3,12 @@ import { Project } from '../components/models/Project';
 export const uiProjects: Project[] = [
   {
     id: 1,
-    title: 'Mobile App Design',
+    title: 'Waypoint',
     description:
-      'Modern fitness tracking app with intuitive user interface and smooth interactions.',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e',
-    url: 'https://github.com/Justin9400/Trading-Signal-Indicator',
+      'AI Travel Planner that generates personalized itineraries based on user preferences and makes real-time suggestions.',
+    image:
+      'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Waypoint.jpg',
+    url: 'https://www.figma.com/design/FfL1CN5PSvIYcYLijzwARX/Waypoint?node-id=0-1&p=f&t=hHyYj6px6pblrdyO-0',
     tech: [
       {
         icon: (
