@@ -123,63 +123,51 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-16">Technical Skills</h2>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-                Frontend
-              </h3>
-              <div className="space-y-6">
-                {frontendSkills.map(skill => (
-                  <div
-                    key={skill.name}
-                    className="flex flex-col items-center gap-4 relative group"
-                  >
-                    {skill.icon}
-                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
-                      {skill.name}
-                    </div>
-                  </div>
-                ))}
+          <h3 className="text-2xl font-semibold mb-6 text-blue-400">
+            Frontend
+          </h3>
+          <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
+            {frontendSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+              >
+                {skill.icon}
+                <p className="mt-2 text-lg font-semibold text-white">
+                  {skill.name}
+                </p>
               </div>
-            </div>
+            ))}
+          </div>
 
-            <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-                Backend
-              </h3>
-              <div className="space-y-6">
-                {backendSkills.map(skill => (
-                  <div
-                    key={skill.name}
-                    className="flex flex-col items-center gap-4 relative group"
-                  >
-                    {skill.icon}
-                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
-                      {skill.name}
-                    </div>
-                  </div>
-                ))}
+          <h3 className="text-2xl font-semibold mb-6 text-blue-400">Backend</h3>
+          <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
+            {backendSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+              >
+                {skill.icon}
+                <p className="mt-2 text-lg font-semibold text-white">
+                  {skill.name}
+                </p>
               </div>
-            </div>
+            ))}
+          </div>
 
-            <div className="bg-gray-800 p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-                Tools
-              </h3>
-              <div className="space-y-6">
-                {toolsSkills.map(tool => (
-                  <div
-                    key={tool.name}
-                    className="flex flex-col items-center gap-4 relative group"
-                  >
-                    {tool.icon}
-                    <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded shadow-lg">
-                      {tool.name}
-                    </div>
-                  </div>
-                ))}
+          <h3 className="text-2xl font-semibold mb-6 text-blue-400">Tools</h3>
+          <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
+            {toolsSkills.map((tool, index) => (
+              <div
+                key={index}
+                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+              >
+                {tool.icon}
+                <p className="mt-2 text-lg font-semibold text-white">
+                  {tool.name}
+                </p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

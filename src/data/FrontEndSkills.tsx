@@ -4,7 +4,7 @@ export const frontendSkills = [
       <img
         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/React.jpg"
         alt="React"
-        className="h-16"
+        className="w-16 h-16 object-contain"
       />
     ),
     name: 'React',
@@ -14,7 +14,7 @@ export const frontendSkills = [
       <img
         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/TypeScript.jpg"
         alt="TypeScript"
-        className="h-16"
+        className="w-16 h-16 object-contain"
       />
     ),
     name: 'TypeScript',
@@ -24,7 +24,7 @@ export const frontendSkills = [
       <img
         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/HTML.jpg"
         alt="HTML"
-        className="h-16"
+        className="w-16 h-16 object-contain"
       />
     ),
     name: 'HTML',
@@ -34,9 +34,19 @@ export const frontendSkills = [
       <img
         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CSS.jpg"
         alt="CSS"
-        className="h-16"
+        className="w-16 h-16 object-contain"
       />
     ),
     name: 'CSS',
+  },
+  {
+    icon: (
+      <img
+        src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Swift.svg"
+        alt="Swift"
+        className="w-16 h-16 object-contain"
+      />
+    ),
+    name: 'Swift',
   },
 ];
