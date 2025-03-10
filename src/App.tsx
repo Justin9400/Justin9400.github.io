@@ -128,12 +128,14 @@ function App() {
           </h3>
           <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
             {frontendSkills.map((skill, index) => (
-              <div
-                key={index}
-                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
-              >
-                {skill.icon}
-                <p className="mt-2 text-lg font-semibold text-white">
+              <div className="flex flex-col items-center">
+                <div
+                  key={index}
+                  className="w-24 h-24 flex items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+                >
+                  {skill.icon}
+                </div>
+                <p className="mt-2 text-lg font-semibold text-white text-center">
                   {skill.name}
                 </p>
               </div>
@@ -143,12 +145,14 @@ function App() {
           <h3 className="text-2xl font-semibold mb-6 text-blue-400">Backend</h3>
           <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
             {backendSkills.map((skill, index) => (
-              <div
-                key={index}
-                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
-              >
-                {skill.icon}
-                <p className="mt-2 text-lg font-semibold text-white">
+              <div className="flex flex-col items-center">
+                <div
+                  key={index}
+                  className="w-24 h-24 flex items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+                >
+                  {skill.icon}
+                </div>
+                <p className="mt-2 text-lg font-semibold text-white text-center">
                   {skill.name}
                 </p>
               </div>
@@ -158,12 +162,14 @@ function App() {
           <h3 className="text-2xl font-semibold mb-6 text-blue-400">Tools</h3>
           <div className="flex items-center space-x-3 overflow-x-auto p-4 justify-center">
             {toolsSkills.map((tool, index) => (
-              <div
-                key={index}
-                className="w-40 h-32 flex flex-col items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
-              >
-                {tool.icon}
-                <p className="mt-2 text-lg font-semibold text-white">
+              <div className="flex flex-col items-center">
+                <div
+                  key={index}
+                  className="w-24 h-24 flex items-center justify-center bg-gray-800 shadow-lg rounded-lg p-4"
+                >
+                  {tool.icon}
+                </div>
+                <p className="mt-2 text-lg font-semibold text-white text-center">
                   {tool.name}
                 </p>
               </div>
