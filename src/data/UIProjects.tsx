@@ -7,7 +7,7 @@ export const uiProjects: Project[] = [
     description:
       'AI Travel Planner that generates personalized itineraries based on user preferences and makes real-time suggestions.',
     image:
-      'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Waypoint.jpg',
+      'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/WaypointAi.jpg',
     url: 'https://www.figma.com/design/FfL1CN5PSvIYcYLijzwARX/Waypoint?node-id=0-1&p=f&t=hHyYj6px6pblrdyO-0',
     tech: [
       {
