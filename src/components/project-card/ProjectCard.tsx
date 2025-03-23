@@ -16,7 +16,10 @@ export const ProjectCard = (props: IProjectCardProps) => {
       key={props.id}
       className="flex justify-center w-full sm:w-1/2 md:w-1/3 p-4"
     >
-      <div className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-full max-w-xs md:max-w-sm backdrop-blur-sm group mx-auto cursor-pointer" onClick={handleCardClick(props.project.url!)}>
+      <div
+        className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-full max-w-xs md:max-w-sm backdrop-blur-sm group mx-auto cursor-pointer"
+        onClick={handleCardClick(props.project.url!)}
+      >
         <div className="relative h-64 overflow-hidden">
           <img
             src={props.project.image}
