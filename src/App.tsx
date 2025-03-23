@@ -1,6 +1,4 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { Carousel } from './components/carousel/Carousel';
-import { ProjectCard } from './components/project-card/ProjectCard';
 import { Timeline } from './components/timeline/Timeline';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
@@ -9,8 +7,9 @@ import { certifications } from './data/Certifications';
 import { frontendSkills } from './data/FrontEndSkills';
 import { backendSkills } from './data/BlackEndSkills';
 import { toolsSkills } from './data/ToolsSkills';
+import { ProjectGrid } from './components/project-grid/ProjectGrid';
 
-function App() {
+export const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <header className="fixed top-0 left-0 right-0 bg-gray-900 shadow-lg z-50">
@@ -185,25 +184,19 @@ function App() {
         certifications={certifications}
       />
 
-      {uiProjects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          id={project.title}
-          headerText={'My Portfolio'}
-          subHeaderText={''}
-          project={project}
-        />
-      ))}
+      <ProjectGrid
+        id={'uiProjects'}
+        projects={uiProjects}
+        headerText={'UI Portfolio'}
+        subHeaderText={''}
+      />
 
-      {codingProjects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          id={project.title}
-          headerText={'My Portfolio'}
-          subHeaderText={''}
-          project={project}
-        />
-      ))}
+      <ProjectGrid
+        id={'uiProjects'}
+        projects={codingProjects}
+        headerText={'Coding Portfolio'}
+        subHeaderText={''}
+      />
 
       <Timeline id={'timeline'} />
 
@@ -214,6 +207,4 @@ function App() {
       </footer>
     </div>
   );
-}
-
-export default App;
+};
