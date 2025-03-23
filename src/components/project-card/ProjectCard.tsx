@@ -8,15 +8,16 @@ interface IProjectCardProps {
 }
 
 export const ProjectCard = (props: IProjectCardProps) => {
+  const handleCardClick = (url: string) => () => {
+    window.open(url, '_blank');
+  };
   return (
-    <a
-      href={props.project.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex justify-center"
+    <div
+      key={props.id}
+      className="flex justify-center w-full sm:w-1/2 md:w-1/3 p-4"
     >
-      <div className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-full max-w-xs md:max-w-sm backdrop-blur-sm group mx-auto">
-        <div className="relative h-64 overflow-hidden cursor-pointer">
+      <div className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl w-full max-w-xs md:max-w-sm backdrop-blur-sm group mx-auto cursor-pointer" onClick={handleCardClick(props.project.url!)}>
+        <div className="relative h-64 overflow-hidden">
           <img
             src={props.project.image}
             alt={props.project.title}
@@ -38,6 +39,6 @@ export const ProjectCard = (props: IProjectCardProps) => {
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
