@@ -1,12 +1,12 @@
 import { Icon } from '../models/Icon';
 
-interface horizontalIconDisplayProps {
+interface IHorizontalIconDisplayProps {
   id: string;
   headerText: string;
   certifications: Icon[];
 }
 
-export const HorizontalIconDisplay = (props: horizontalIconDisplayProps) => {
+export const HorizontalIconDisplay = (props: IHorizontalIconDisplayProps) => {
   return (
     <section id={props.id} className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">

@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Carousel } from './components/carousel/Carousel';
+import { ProjectCard } from './components/project-card/ProjectCard';
 import { Timeline } from './components/timeline/Timeline';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
@@ -184,19 +185,25 @@ function App() {
         certifications={certifications}
       />
 
-      <Carousel
-        id={'uiProjects'}
-        projects={uiProjects}
-        headerText={'UI/UX Designs'}
-        subHeaderText={''}
-      />
+      {uiProjects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          id={project.title}
+          headerText={'My Portfolio'}
+          subHeaderText={''}
+          project={project}
+        />
+      ))}
 
-      <Carousel
-        id={'codingProjects'}
-        projects={codingProjects}
-        headerText={'My Portfolio'}
-        subHeaderText={''}
-      />
+      {codingProjects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          id={project.title}
+          headerText={'My Portfolio'}
+          subHeaderText={''}
+          project={project}
+        />
+      ))}
 
       <Timeline id={'timeline'} />
 

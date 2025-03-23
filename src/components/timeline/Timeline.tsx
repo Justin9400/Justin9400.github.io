@@ -1,8 +1,8 @@
-interface Timelineprops {
+interface ITimelineprops {
   id: string;
 }
 
-export const Timeline = (props: Timelineprops) => {
+export const Timeline = (props: ITimelineprops) => {
   const timelineData = [
     {
       year: 'June 2023 - Present',
@@ -17,7 +17,7 @@ export const Timeline = (props: Timelineprops) => {
       year: 'August 2019 - May 2023',
       title: 'University of Lynchburg, Lynchburg, VA',
       description:
-        'Attended the University of Lynchburg and studied Computer Science and Data Science.',
+        'Studied Computer Science and Data Science at the University of Lynchburg.',
       img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/University-of-Lynchburg.jpg',
       link: 'https://www.lynchburg.edu/',
       side: 'right',

@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Project } from '../models/Project';
 
-interface CarouselProps {
+interface ICarouselProps {
   id: string;
   headerText: string;
   subHeaderText: string;
   projects: Project[];
 }
 
-export const Carousel = (props: CarouselProps) => {
+export const Carousel = (props: ICarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
