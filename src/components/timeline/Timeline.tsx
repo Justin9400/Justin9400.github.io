@@ -1,29 +1,11 @@
+import { TimelineData } from '../models/TimelineData';
+
 interface ITimelineprops {
   id: string;
+  timelineData: TimelineData[];
 }
 
 export const Timeline = (props: ITimelineprops) => {
-  const timelineData = [
-    {
-      year: 'June 2023 - Present',
-      title: 'CloudFit Software, Lynchburg, VA',
-      description:
-        'I currently work as a Software Engineer at CloudFit Software in Lynchburg, Virginia.',
-      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/CloudFit.jpg',
-      link: 'https://cloudfitsoftware.com/',
-      side: 'left',
-    },
-    {
-      year: 'August 2019 - May 2023',
-      title: 'University of Lynchburg, Lynchburg, VA',
-      description:
-        'Studied Computer Science and Data Science at the University of Lynchburg.',
-      img: 'https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/University-of-Lynchburg.jpg',
-      link: 'https://www.lynchburg.edu/',
-      side: 'right',
-    },
-  ];
-
   return (
     <section id={props.id} className="container mx-auto">
       <div className="flex flex-col items-center py-10 bg-transparent">
@@ -32,7 +14,7 @@ export const Timeline = (props: ITimelineprops) => {
         <div className="relative w-full max-w-3xl">
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-gray-300"></div>
 
-          {timelineData.map((item, index) => (
+          {props.timelineData.map((item, index) => (
             <div
               key={index}
               className={`mb-16 flex flex-col md:flex-row ${item.side === 'left' ? 'md:justify-start' : 'md:justify-end'} items-center w-full relative px-8`}
