@@ -90,14 +90,14 @@ export const App = () => {
       <ProjectGrid
         id={'uiProjects'}
         projects={uiProjects}
-        headerText={'UI Portfolio'}
+        headerText={'Designs'}
         subHeaderText={''}
       />
 
       <ProjectGrid
         id={'codingProjects'}
         projects={codingProjects}
-        headerText={'Coding Portfolio'}
+        headerText={'Projects'}
         subHeaderText={''}
       />
 
