@@ -15,16 +15,16 @@ export const HorizontalIconDisplay = (props: IHorizontalIconDisplayProps) => {
         </h2>
         <div className="flex flex-wrap justify-center space-x-8">
           {props.certifications.map((cert, index) => (
-            <a
-              key={index}
-              href={cert.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 text-center transition-transform duration-300 m-4"
-            >
-              <div className="flex justify-center">{cert.icon}</div>
-              <p className="mt-2 text-sm text-blue-400">{cert.name}</p>
-            </a>
+        <a
+          key={index}
+          href={cert.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-shrink-0 text-center transition-transform duration-300 m-4 transform hover:scale-110"
+        >
+          <div className="flex justify-center">{cert.icon}</div>
+          <p className="mt-2 text-sm text-blue-400">{cert.name}</p>
+        </a>
           ))}
         </div>
       </div>
