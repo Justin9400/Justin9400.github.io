@@ -11,15 +11,16 @@ import { About } from './components/about/About';
 import { Home } from './components/home/Home';
 import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
+import { timelineData } from './data/Timeline';
 
 export const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      <Header/>
+      <Header />
 
-      <Home/>
+      <Home />
 
-      <About/>
+      <About />
 
       <section id="skills" className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -94,15 +95,15 @@ export const App = () => {
       />
 
       <ProjectGrid
-        id={'uiProjects'}
+        id={'codingProjects'}
         projects={codingProjects}
         headerText={'Coding Portfolio'}
         subHeaderText={''}
       />
 
-      <Timeline id={'timeline'} />
+      <Timeline id={'timeline'} timelineData={timelineData} />
 
-      <Footer/>
+      <Footer text={'© 2025 Justin Kachornvanich | All rights reserved.'} />
     </div>
   );
 };
