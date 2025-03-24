@@ -10,6 +10,7 @@ import { ProjectGrid } from './components/project-grid/ProjectGrid';
 import { About } from './components/about/About';
 import { Home } from './components/home/Home';
 import { Header } from './components/header/Header';
+import { Footer } from './components/footer/Footer';
 
 export const App = () => {
   return (
@@ -101,11 +102,7 @@ export const App = () => {
 
       <Timeline id={'timeline'} />
 
-      <footer id="contact" className="container mx-auto px-4 py-8">
-        <div className="text-center text-gray-400">
-          <p>© 2024 Portfolio. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
