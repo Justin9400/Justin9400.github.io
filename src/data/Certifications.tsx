@@ -6,12 +6,12 @@ export const certifications: Icon[] = [
     icon: (
       <img
         src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Sec+.jpg"
-        alt="CompTia Security+"
+        alt="CompTIA Security+"
         className="h-20"
       />
     ),
     url: 'https://www.credly.com/badges/0b197a0d-825d-41e8-b343-d1ac7c27ac1b/linked_in_profile',
-    name: 'CompTia Security+',
+    name: 'CompTIA Security+',
   },
   {
     id: 2,
