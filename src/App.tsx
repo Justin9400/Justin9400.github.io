@@ -1,17 +1,20 @@
+import { useEffect, useState } from 'react';
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
 import { certifications } from './data/Certifications';
-import { frontendSkills } from './data/FrontEndSkills';
-import { backendSkills } from './data/BlackEndSkills';
-import { toolsSkills } from './data/ToolsSkills';
 import { timelineData } from './data/Timeline';
 import type { Project } from './components/models/Project';
 
 const navigation = [
   ['About', 'about'], ['Experience', 'experience'], ['Projects', 'projects'],
-  ['Designs', 'designs'], ['Skills', 'skills'], ['Certifications', 'certifications'],
+  ['Designs', 'designs'], ['Certifications', 'certifications'],
 ];
+
+const experienceSkills: Record<number, string[]> = {
+  1: ['Software Engineering', 'Web Development'],
+  2: ['Computer Science', 'Data Science', 'Mathematics'],
+};
 
 function ProjectRow({ project }: { project: Project }) {
   return (
@@ -28,17 +31,48 @@ function ProjectRow({ project }: { project: Project }) {
   );
 }
 
-export const App = () => (
+export const App = () => {
+  const [activeSection, setActiveSection] = useState('about');
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const sections = navigation.map(([, id]) => document.getElementById(id));
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActiveSection(navigation[navigation.length - 1][1]);
+        return;
+      }
+      const threshold = window.innerHeight * 0.35;
+      let current = navigation[0][1];
+      sections.forEach((section, index) => {
+        if (section && section.getBoundingClientRect().top <= threshold) current = navigation[index][1];
+      });
+      setActiveSection(current);
+    };
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, []);
+
+  return (
   <div className="site-shell">
     <a className="skip-link" href="#about">Skip to content</a>
     <header className="sidebar">
       <div>
         <a className="name" href="#top">Justin Kachornvanich</a>
-        <h1>Software Engineer</h1>
-        <p className="intro">I build thoughtful software and digital experiences that help people.</p>
-        <img className="portrait" src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg" alt="Justin Kachornvanich" />
+        <div className="intro-row">
+          <div className="intro-copy">
+            <h1>Software Engineer</h1>
+            <p className="intro">I build thoughtful software and digital experiences that help people.</p>
+          </div>
+          <img className="portrait" src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg" alt="Justin Kachornvanich" />
+        </div>
         <nav aria-label="Main navigation">
-          <ul>{navigation.map(([label, id]) => <li key={id}><a href={`#${id}`}><span className="nav-line" />{label}</a></li>)}</ul>
+          <ul>{navigation.map(([label, id]) => <li key={id}><a href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}><span className="nav-line" />{label}</a></li>)}</ul>
         </nav>
       </div>
       <div className="socials">
@@ -57,18 +91,14 @@ export const App = () => (
       <section id="experience" className="section">
         <h2>Experience</h2>
         <div className="experience-list">{timelineData.map(item => <article className="experience-row" key={item.id}>
-          <p className="date">{item.year}</p><div><h3><a href={item.link} target="_blank" rel="noreferrer">{item.title} <ArrowUpRight size={15} aria-hidden="true" /></a></h3><p>{item.description}</p></div>
+          <p className="date">{item.year}</p><div><h3><a href={item.link} target="_blank" rel="noreferrer">{item.title} <ArrowUpRight size={15} aria-hidden="true" /></a></h3><p>{item.description}</p><ul className="tags" aria-label="Skills">{(experienceSkills[item.id] ?? []).map(skill => <li key={skill}>{skill}</li>)}</ul></div>
         </article>)}</div>
       </section>
       <section id="projects" className="section"><h2>Projects</h2><div className="project-list">{codingProjects.map(project => <ProjectRow key={project.id} project={project} />)}</div></section>
       <section id="designs" className="section"><h2>Designs</h2><div className="project-list">{uiProjects.map(project => <ProjectRow key={project.id} project={project} />)}</div></section>
-      <section id="skills" className="section"><h2>Skills</h2>
-        {[['Frontend', frontendSkills], ['Backend', backendSkills], ['Tools', toolsSkills]].map(([heading, items]) => <div className="skill-group" key={heading as string}>
-          <h3>{heading as string}</h3><ul className="skill-list">{(items as typeof frontendSkills).map(item => <li key={item.name}><span className="skill-icon">{item.icon}</span><span>{item.name}</span></li>)}</ul>
-        </div>)}
-      </section>
       <section id="certifications" className="section"><h2>Certifications</h2><div className="cert-list">{certifications.map(cert => <a className="cert" key={cert.id} href={cert.url} target="_blank" rel="noreferrer"><span className="cert-icon">{cert.icon}</span><span>{cert.name} <ArrowUpRight size={15} aria-hidden="true" /></span></a>)}</div></section>
       <footer>Designed and built by Justin Kachornvanich.</footer>
     </main>
   </div>
-);
+  );
+};
