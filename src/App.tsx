@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
@@ -30,7 +31,34 @@ function ProjectRow({ project }: { project: Project }) {
   );
 }
 
-export const App = () => (
+export const App = () => {
+  const [activeSection, setActiveSection] = useState('about');
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const sections = navigation.map(([, id]) => document.getElementById(id));
+      const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (atBottom) {
+        setActiveSection(navigation[navigation.length - 1][1]);
+        return;
+      }
+      const threshold = window.innerHeight * 0.35;
+      let current = navigation[0][1];
+      sections.forEach((section, index) => {
+        if (section && section.getBoundingClientRect().top <= threshold) current = navigation[index][1];
+      });
+      setActiveSection(current);
+    };
+    updateActiveSection();
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('resize', updateActiveSection);
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection);
+      window.removeEventListener('resize', updateActiveSection);
+    };
+  }, []);
+
+  return (
   <div className="site-shell">
     <a className="skip-link" href="#about">Skip to content</a>
     <header className="sidebar">
@@ -44,7 +72,7 @@ export const App = () => (
           <img className="portrait" src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg" alt="Justin Kachornvanich" />
         </div>
         <nav aria-label="Main navigation">
-          <ul>{navigation.map(([label, id]) => <li key={id}><a href={`#${id}`}><span className="nav-line" />{label}</a></li>)}</ul>
+          <ul>{navigation.map(([label, id]) => <li key={id}><a href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}><span className="nav-line" />{label}</a></li>)}</ul>
         </nav>
       </div>
       <div className="socials">
@@ -72,4 +100,5 @@ export const App = () => (
       <footer>Designed and built by Justin Kachornvanich.</footer>
     </main>
   </div>
-);
+  );
+};
