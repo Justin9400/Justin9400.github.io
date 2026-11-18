@@ -1,4 +1,3 @@
-/Users/justinkachornvanich/.rvm/scripts/rvm:29: operation not permitted: ps
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { codingProjects } from './data/CodingProjects';
 import { uiProjects } from './data/UIProjects';
