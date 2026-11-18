@@ -36,9 +36,13 @@ export const App = () => (
     <header className="sidebar">
       <div>
         <a className="name" href="#top">Justin Kachornvanich</a>
-        <h1>Software Engineer</h1>
-        <p className="intro">I build thoughtful software and digital experiences that help people.</p>
-        <img className="portrait" src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg" alt="Justin Kachornvanich" />
+        <div className="intro-row">
+          <div className="intro-copy">
+            <h1>Software Engineer</h1>
+            <p className="intro">I build thoughtful software and digital experiences that help people.</p>
+          </div>
+          <img className="portrait" src="https://raw.githubusercontent.com/Justin9400/Justin9400.github.io/master/src/images/Headshot.jpg" alt="Justin Kachornvanich" />
+        </div>
         <nav aria-label="Main navigation">
           <ul>{navigation.map(([label, id]) => <li key={id}><a href={`#${id}`}><span className="nav-line" />{label}</a></li>)}</ul>
         </nav>
